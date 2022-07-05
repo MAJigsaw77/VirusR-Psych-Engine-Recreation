@@ -25,14 +25,14 @@ function onCreate()
 	addAnimationByPrefix('mute', 'idle', 'jingyin', 24)
 	setGraphicSize('mute', getProperty('mute.width') * 0.5)
 	setObjectCamera('mute', 'hud')
-	setProperty('mute.alpha', 0)
+	setProperty('mute.alpha', 0.00001)
 	addLuaSprite('mute', true)
 
 	makeAnimatedLuaSprite('blue', 'stage/cyber2/blue', 0, 0)
 	addAnimationByPrefix('blue', 'idle', 'texiao', 24)
 	objectPlayAnimation('blue', 'idle')
 	setObjectCamera('blue', 'hud')
-	setProperty('blue.alpha', 0)
+	setProperty('blue.alpha', 0.00001)
 	addLuaSprite('blue', true)
 end
 
@@ -56,8 +56,8 @@ function onStepHit()
 			setProperty('mute.alpha', 1)
 		end
 		if curStep == 943 then
-			setProperty('blue.alpha', 0)
-			setProperty('mute.alpha', 0)
+			setProperty('blue.alpha', 0.00001)
+			setProperty('mute.alpha', 0.00001)
 		end
 	end
 end
