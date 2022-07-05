@@ -6,13 +6,13 @@ function onCreate()
 	makeAnimatedLuaSprite('specialr', 'stage/window/Rteshu', 10,14)
 	addAnimationByPrefix('specialr', 'black', 'Rblack', 24, false)
 	addAnimationByPrefix('specialr', 'smile', 'Rsmile', 18, false)
-	setProperty('specialr.alpha', 0)
+	setProperty('specialr.alpha', 0.00001)
 	addLuaSprite('specialr', false)
 
 	makeAnimatedLuaSprite('border', 'stage/window/Black', 0,0)
 	addAnimationByPrefix('border', 'black', 'Black', 12, false)
 	setObjectCamera('border', 'hud')
-	setProperty('border.alpha', 0)
+	setProperty('border.alpha', 0.00001)
 	addLuaSprite('border', false)
 
 	makeAnimatedLuaSprite('winbg', 'stage/window/week2BG', 0,0)
@@ -53,7 +53,7 @@ function onStepHit()
 		end
 		if curStep == 256 then
 			setProperty('dad.alpha', 1)
-			setProperty('specialr.alpha', 0)
+			setProperty('specialr.alpha', 0.00001)
 		end
 		if curStep == 768 then
 			objectPlayAnimation('border', 'idle', true)
@@ -63,13 +63,13 @@ function onStepHit()
 			doTweenAlpha('border1', 'border', 0, 0.5)
 		end
 		if curStep == 1776 then
-			setProperty('dad.alpha', 0)
+			setProperty('dad.alpha', 0.00001)
 			setProperty('specialr.alpha', 1)
 			objectPlayAnimation('specialr', 'black', true)
 		end
 		if curStep == 1792 then
 			setProperty('dad.alpha', 1)
-			setProperty('specialr.alpha', 0)
+			setProperty('specialr.alpha', 0.00001)
 		end
 		if curStep == 2692 then
 			objectPlayAnimation('border', 'idle', true)
@@ -77,7 +77,7 @@ function onStepHit()
 			doTweenAlpha('border2', 'border', 0, 19)
 		end
 		if curStep == 2815 then
-			setProperty('dad.alpha', 0)
+			setProperty('dad.alpha', 0.00001)
 			setProperty('specialr.alpha', 1)
 			objectPlayAnimation('specialr', 'smile', true)
 		end
